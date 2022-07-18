@@ -49,4 +49,4 @@ _Blaze Pose_
 ![Blaze Pose!](SetupImages~/BlazePoseSetup.png)
 
 _Video_
-![Video!](SetupImages~/BlazePose.mp4)
+![Video!](SetupImages~/BlazePose.gif)
