@@ -46,7 +46,7 @@ BlazePose
 ## SET UP
 
 _Blaze Pose_
-![Blaze Pose!](SetupImages~/BlazePoseSetup.png"Blaze Pose in Inspector")
+![Blaze Pose!](SetupImages~/BlazePoseSetup.png)
 
 _Video_
-![Video!](SetupImages~/BlazePose.mp4"Sample Video")
+![Video!](SetupImages~/BlazePose.mp4)
