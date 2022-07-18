@@ -1,0 +1,19 @@
+{
+    "name": "DSI.BlazePose",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6e1d47a1424c040aca79d8b6a2710888",
+        "GUID:bf0184192290e4dbd82dadbbe75162b1",
+        "GUID:98f31ee3d205e4a19aea6d3a179ae522"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
