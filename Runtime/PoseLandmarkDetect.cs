@@ -134,7 +134,7 @@ namespace DSI.BlazePose
                inputTex, resizeOptions.width, resizeOptions.height, true,
                cropMatrix,
                TextureResizer.GetTextureST(inputTex, resizeOptions));
-            ToTensor(rt, input0, false);
+            ToTensor(rt, inputTensor, false);
 
             InvokeInternal();
 
@@ -148,7 +148,7 @@ namespace DSI.BlazePose
               inputTex, resizeOptions.width, resizeOptions.height, true,
               cropMatrix,
               TextureResizer.GetTextureST(inputTex, resizeOptions));
-            await ToTensorAsync(rt, input0, false, cancellationToken);
+            await ToTensorAsync(rt, inputTensor, false, cancellationToken);
             await UniTask.SwitchToThreadPool();
 
             InvokeInternal();
@@ -159,7 +159,7 @@ namespace DSI.BlazePose
 
         private void InvokeInternal()
         {
-            interpreter.SetInputTensorData(0, input0);
+            interpreter.SetInputTensorData(0, inputTensor);
             interpreter.Invoke();
             interpreter.GetOutputTensorData(0, output0);
             interpreter.GetOutputTensorData(1, output1);

@@ -94,9 +94,9 @@ namespace DSI.BlazePose
 
         public override void Invoke(Texture inputTex)
         {
-            ToTensor(inputTex, input0);
+            ToTensor(inputTex, inputTensor);
 
-            interpreter.SetInputTensorData(0, input0);
+            interpreter.SetInputTensorData(0, inputTensor);
             interpreter.Invoke();
 
             interpreter.GetOutputTensorData(0, output0);
@@ -105,10 +105,10 @@ namespace DSI.BlazePose
 
         public async UniTask<Result> InvokeAsync(Texture inputTex, CancellationToken cancellationToken, PlayerLoopTiming timing = PlayerLoopTiming.Update)
         {
-            await ToTensorAsync(inputTex, input0, cancellationToken);
+            await ToTensorAsync(inputTex, inputTensor, cancellationToken);
             await UniTask.SwitchToThreadPool();
 
-            interpreter.SetInputTensorData(0, input0);
+            interpreter.SetInputTensorData(0, inputTensor);
             interpreter.Invoke();
 
             interpreter.GetOutputTensorData(0, output0);
